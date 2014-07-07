@@ -1,1 +1,1 @@
-(View Demo)[http://cabloo.github.io/life/]
+[View Demo](http://cabloo.github.io/life/)
