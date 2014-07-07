@@ -1,0 +1,23 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+.life {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.life a, .life b {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.life a {
+	background: #ddd;
+}
