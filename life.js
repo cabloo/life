@@ -63,8 +63,6 @@ life = function(options){
 		width = this.el.childNodes[0].offsetWidth,
 		height = this.el.childNodes[0].offsetHeight;
 
-	console.log([dWidth, dHeight, width, height]);
-
 	if (options.cols == 'auto') {
 		this.cols = Math.floor(dWidth/width);
 	}
@@ -78,7 +76,6 @@ life = function(options){
 
 		var col = getNodeIndex(e.target),
 			row = getNodeIndex(e.target.parentNode);
-		console.log([col, row]);
 
 		self.toggle(col, row).refreshGrid();
 	}
@@ -100,9 +97,20 @@ life = function(options){
 		}
 
 		this.grid = new Array(cols);
-		var hc = Math.floor(cols/2),
-			hr = Math.floor(rows/2),
-			start = [[hc, hr], [hc, hr+1], [hc+1,hr], [hc-1, hr], [hc+2, hr-1]];
+		var hh = Math.floor(cols/2),
+			hv = Math.floor(rows/2),
+			start = [
+				[hh, hv],
+				[hh+2, hv],
+				[hh+2, hv+1],
+				[hh+4, hv+2],
+				[hh+4, hv+3],
+				[hh+4, hv+4],
+				[hh+6, hv+3],
+				[hh+6, hv+4],
+				[hh+6, hv+5],
+				[hh+7, hv+4],
+			];
 
 		for (var i = 0; i < cols; i++) {
 			this.grid[i] = new Array(j);
